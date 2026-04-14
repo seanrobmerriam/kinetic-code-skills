@@ -69,8 +69,6 @@ The pack is organized so each skill has its own `SKILL.md` file in one of these 
 ```text
 kinetic-coding-rules/
   kinetic-code-skills.md
-  code-functionality-skills.md
-  testing-skills.md
   code-functionality-skills/
 	 <skill-name>/
 		SKILL.md
@@ -148,6 +146,3 @@ This skill pack is working as intended when:
 - Functionality and testing skills are separated into their own directories
 - Teams can quickly find each skill by topic
 - Implementations become more reliable, testable, and maintainable
-
-**Status**: Complete  
-**Total Skills**: 20 (10 code functionality + 10 testing)
