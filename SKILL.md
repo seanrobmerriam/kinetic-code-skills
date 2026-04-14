@@ -1,16 +1,47 @@
-# Kinetic Code Skills
+---
+name: isolate-tests-from-external-dependencies
+description: Tests must not depend on external systems, databases, or network calls. Mock external dependencies. Use test data, not production data. Tests must be independent and repeatable. Running tests multiple times must produce same results.
+---
+
+# Kinetic Code Necessary Skills
 
 ## Overview
 
-This skill pack combines 20 coding quality skills:
+This skill combines 20 individual coding quality skills:
 
 - 10 code functionality skills
 - 10 testing skills
 
-The pack is organized so each skill has its own `SKILL.md` file in one of these directories:
+The skill is organized so each individual skill has its own `SKILL.md` file in one of these directories:
 
 - `/code-functionality-skills`
 - `/testing-skills`
+
+---
+
+## How to Use
+
+This skill is designed to improve code quality across two dimensions: writing robust code and testing it thoroughly.
+
+### For Individual Developers
+
+1. **Select a Skill**: Choose a skill from the lists below that matches the code challenge or situation you're facing (e.g., "handling errors," "validating inputs," "testing edge cases")
+2. **Read the Skill File**: Navigate to the skill's `SKILL.md` file in either `/code-functionality-skills` or `/testing-skills`
+3. **Apply the Checklist**: Use the skill's checklist and guidance to implement or review your code
+4. **Verify Against Criteria**: Run tests or code review against the skill's requirements before shipping
+
+### For Teams
+
+1. **Adopt as a Code Standard**: Reference this skill pack in your pull request checklist or coding standards
+2. **Link During Reviews**: When reviewing PRs, cite the relevant skill if code violates its principles
+3. **Share Skill References**: Help team members navigate to the specific skill that describes the issue they're working on
+4. **Build Habits**: Rotate through skills in team meetings to build shared understanding
+
+### For Debugging and Incident Response
+
+- **Post-Mortem**: When a bug occurs, identify which skill(s) could have prevented it, then review that skill's checklist
+- **Root Cause**: Use the quick reference table to find which coding or testing principle was missed
+- **Future Prevention**: Add the failing skill to your team's next focus area
 
 ---
 
@@ -135,6 +166,33 @@ CODE QUALITY CYCLE:
 | 8 | Test Isolation | Prevent flaky dependency-driven failures |
 | 9 | Happy + Error Path Coverage | Ensure robustness in all outcomes |
 | 10 | Coverage Maintenance | Keep tests useful as code changes |
+
+---
+
+## DO's and DON'Ts
+
+### DO ✓
+
+- **DO use these skills in sequence**: Apply functionality checklist first (input → processing → output), then testing checklist (coverage → edge cases → integration)
+- **DO read the individual skill files**: Each has deeper context, examples, and edge cases beyond this summary
+- **DO customize the checklists**: Adapt the skills to your language, framework, or domain-specific constraints
+- **DO reference skills by name** in pull request comments and team discussions
+- **DO combine multiple skills**: Many defects are caught by combining skills (e.g., input validation + state verification + error handling)
+- **DO keep tests alongside functionality skills**: Write tests *while* implementing, not after
+- **DO use the quick reference table** when you're unsure if your code handles a specific case
+- **DO review this pack regularly**: Business needs, technologies, and team composition change—revisit quarterly
+
+### DON'T ✗
+
+- **DON'T skip testing skills** because "it's a small change"—even small changes break contracts
+- **DON'T memorize the checklist**: Understanding *why* each skill matters is more valuable than memorization
+- **DON'T apply all skills superficially**: Better to apply 3 skills deeply than 20 skills as box-checking
+- **DON'T treat skills as optional**:  Each one prevents a specific class of production bugs
+- **DON'T ignore error cases**: "It will never happen" is where most failures hide
+- **DON'T write tests after code ships**: Testing must inform design, not validate it after the fact
+- **DON'T skip state verification**: Stateful systems fail silently if preconditions aren't checked
+- **DON'T use this skill pack in isolation** from your team's existing standards, architecture, or review process
+- **DON'T assume edge cases are rare**: Off-by-one, null, empty collection, and timeout bugs are among the most common
 
 ---
 
